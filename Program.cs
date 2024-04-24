@@ -118,7 +118,7 @@
             // | 90 -----------A---------- 100
             else if (numericalGrade >= 90)
             {
-                numericalGrade -= 90;
+                numericalGrade %= 10;
                 letterGrade = "A";
 
                 if (numericalGrade <= 95)
@@ -143,6 +143,7 @@
             }
             else if (numericalGrade >= 70)
             {
+                numericalGrade -= 70;
                 letterGrade = "C";
 
                 if (numericalGrade > 7)
@@ -156,6 +157,7 @@
             }
             else if (numericalGrade >= 60)
             {
+                numericalGrade -= 60;
                 letterGrade = "D";
                 if (numericalGrade > 7)
                 {
